@@ -1,0 +1,1 @@
+D:\Task\PaymentGateway\paymentgateway.client\obj\Debug\paymentgateway.client.esproj.CoreCompileInputs.cache

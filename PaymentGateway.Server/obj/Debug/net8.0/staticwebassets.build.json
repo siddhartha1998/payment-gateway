@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "beTbI3I/u2kUR2Gihw4G/vOk7fIrMxfbONQdUuCiQ3U=",
+  "Source": "PaymentGateway.Server",
+  "BasePath": "_content/PaymentGateway.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\Task\\PaymentGateway\\paymentgateway.client\\paymentgateway.client.esproj",
+      "Version": 2,
+      "Source": "paymentgateway.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
