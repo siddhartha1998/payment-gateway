@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaymentGateway.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7364bc66b5c710f40175eecaafa114f25c261cff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2e39c668e9254be9cf4e8ff59deec4f618721de")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaymentGateway.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaymentGateway.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

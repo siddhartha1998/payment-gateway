@@ -4,6 +4,6 @@ namespace PaymentGateway.Server.Infrastructure.Identity
 {
     public class User : IdentityUser<int>
     {
-        public bool isActive { get; set; }
+        public bool IsActive { get; set; }
     }
 }
