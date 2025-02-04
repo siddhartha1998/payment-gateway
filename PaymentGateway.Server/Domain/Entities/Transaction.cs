@@ -9,8 +9,9 @@ namespace PaymentGateway.Server.Domain.Entities
         [Key]
         public int Id { get; set; }
         public decimal Amount { get; set; }
-        public string Currency { get; set; }
-        public string CardNumber { get; set; }
+        public string? Currency { get; set; }
+        public string? CardNumber { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
+        public PaymentStatus PaymentStatus { get; set; }
     }
 }
