@@ -3,12 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using PaymentGateway.Server.Api.Services;
 using PaymentGateway.Server.Application.Common.Interface;
+using PaymentGateway.Server.Infrastructure;
 using PaymentGateway.Server.Infrastructure.Identity;
 using PaymentGateway.Server.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
 
 builder.Services.AddSingleton<ICurrentUserService, CurrentUserService>();
 builder.Services.AddHttpContextAccessor();
@@ -17,6 +20,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
@@ -27,7 +31,7 @@ using (var scope = app.Services.CreateScope())
     {
         var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
         var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
-        await ApplicationDbContextSeed.SeedDefaultUserAsync(userManager,roleManager);
+        await ApplicationDbContextSeed.SeedDefaultUserAsync(userManager, roleManager);
     }
     catch (Exception ex)
     {

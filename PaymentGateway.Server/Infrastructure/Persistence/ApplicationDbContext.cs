@@ -21,7 +21,7 @@ namespace PaymentGateway.Server.Infrastructure.Persistence
             _currentUserService = currentUserService;
             _dateTime = dateTime;
         }
-        public DbSet<Transaction> Transactions => Set<Transaction>();
+        public DbSet<Transaction> Transactions { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
         {
@@ -47,8 +47,8 @@ namespace PaymentGateway.Server.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            builder.Entity<ApplicationRole>().Property(x => x.Id).ValueGeneratedOnAddOrUpdate();
+            //builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            //builder.Entity<ApplicationRole>().Property(x => x.Id).ValueGeneratedOnAddOrUpdate();
 
             base.OnModelCreating(builder);
 
@@ -60,11 +60,36 @@ namespace PaymentGateway.Server.Infrastructure.Persistence
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<ApplicationRole>()
-                .HasMany(r => r.RoleUsers)
+                .HasMany(r => r.UserRoles)
                 .WithOne()
                 .HasForeignKey(r => r.RoleId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<ApplicationUser>()
+                .HasMany(u => u.Transactions)
+                .WithOne(t => t.User)
+                .HasForeignKey(t => t.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<Transaction>(config =>
+            {
+                config.Property(t => t.CardNumber)
+               .HasMaxLength(19)
+               .IsRequired();
+
+                config.Property(t => t.Amount)
+                    .HasColumnType("decimal(12,4)")
+                    .IsRequired();
+
+                config.Property(t => t.PaymentMethod)
+                    .HasConversion<int>()
+                    .IsRequired();
+
+                config.Property(t => t.PaymentStatus)
+                    .HasConversion<int>()
+                    .IsRequired();
+            });
         }
     }
 }
