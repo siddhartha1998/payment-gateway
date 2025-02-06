@@ -1,42 +1,77 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
-
-# IDEs and editors
+# Ignore build and output files
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.log
+*.cache
+*.vs/
+.vscode/
 .idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.ide
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+# Ignore dependency folders
+node_modules/
+wwwroot/lib/
+dist/
+tmp/
+temp/
 
-# System files
-.DS_Store
-Thumbs.db
+# Ignore environment and secret files
+.env
+.env.local
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json  # Ignore custom environment settings (except production)
+
+# Ignore package manager files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json  # Optional: Remove this if you want to track lock files
+
+# Ignore Angular build artifacts
+.angular/
+coverage/
+karma-coverage/
+jest/
+test-results/
+src/environments/environment.ts
+src/environments/environment.prod.ts
+
+# Ignore logs and caches
+logs/
+*.log
+*.nlog
+*.tlog
+*.etl
+*.cache
+.DS_Store  # macOS metadata
+Thumbs.db  # Windows thumbnail cache
+
+# Ignore EF Core migrations and SQLite database
+Migrations/
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+
+# Ignore IDE and editor settings
+*.iml
+.idea/
+*.vs/
+.vscode/
+*.swp
+
+# Ignore Rider files
+*.sln.DotSettings
+.idea/

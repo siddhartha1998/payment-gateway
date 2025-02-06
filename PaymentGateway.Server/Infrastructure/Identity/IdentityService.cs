@@ -7,7 +7,7 @@ namespace PaymentGateway.Server.Infrastructure.Identity
 {
 
     public class IdentityService(UserManager<ApplicationUser> userManager,
-                           IApplicationDbContext context)
+                           IApplicationDbContext context) : IIdentityService
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;
         private readonly IApplicationDbContext _context = context;
@@ -28,5 +28,9 @@ namespace PaymentGateway.Server.Infrastructure.Identity
             return identityResult.ToApplicationResult();
         }
 
+        public Task<string> GetUserNameAsync(int userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
