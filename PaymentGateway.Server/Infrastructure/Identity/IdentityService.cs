@@ -6,11 +6,10 @@ using PaymentGateway.Server.Application.Users.Commands;
 namespace PaymentGateway.Server.Infrastructure.Identity
 {
 
-    public class IdentityService(UserManager<ApplicationUser> userManager,
-                           IApplicationDbContext context) : IIdentityService
+    public class IdentityService(UserManager<ApplicationUser> userManager) : IIdentityService
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;
-        private readonly IApplicationDbContext _context = context;
+   
     
 
     public async Task<Result> CreateUserAsync(CreateUserCommand command)
@@ -28,9 +27,16 @@ namespace PaymentGateway.Server.Infrastructure.Identity
             return identityResult.ToApplicationResult();
         }
 
+        public async Task<ApplicationUser> GetUserByIdAsync(int userId)
+        {
+            ApplicationUser result = await _userManager.FindByIdAsync(userId.ToString());
+            return result;
+        }
+
         public Task<string> GetUserNameAsync(int userId)
         {
             throw new NotImplementedException();
         }
+
     }
 }

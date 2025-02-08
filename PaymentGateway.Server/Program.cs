@@ -1,11 +1,14 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using PaymentGateway.Server.Api.Services;
 using PaymentGateway.Server.Application.Common.Interface;
+using PaymentGateway.Server.Application.Common.Services;
 using PaymentGateway.Server.Infrastructure;
 using PaymentGateway.Server.Infrastructure.Identity;
 using PaymentGateway.Server.Infrastructure.Persistence;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +24,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddHttpClient();
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+builder.Services.AddScoped<IPaymentPublisher, PaymentPublisherService>();
+builder.Services.AddHostedService<PaymentConsumerService>();
 
 var app = builder.Build();
 

@@ -14,7 +14,7 @@ namespace PaymentGateway.Server.Infrastructure.Persistence
                 await roleManager.CreateAsync(administratorRole);
             }
 
-            var adminstratorUser = new ApplicationUser { UserName = "admin", Email = "admin@gmail.com",PhoneNumber = "0123456789", IsActive = true };
+            var adminstratorUser = new ApplicationUser { UserName = "admin", Email = "admin@gmail.com",PhoneNumber = "0123456789",FullName = "Siddhiganesh Joshi", IsActive = true };
 
             if (userManager.Users.All(u => u.UserName != adminstratorUser.UserName))
             {

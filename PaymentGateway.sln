@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Server", "PaymentGateway.Server\PaymentGateway.Server.csproj", "{126D4983-ACFD-4191-9ADC-3B0425F90567}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "paymentgateway.client", "paymentgateway.client\paymentgateway.client.esproj", "{137B09F8-5D65-484E-BECF-990A0465B5E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPaymentServer", "DemoPaymentServer\DemoPaymentServer.csproj", "{D7428F86-AD2C-40C7-A7AD-096E657BF613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{137B09F8-5D65-484E-BECF-990A0465B5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{137B09F8-5D65-484E-BECF-990A0465B5E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{137B09F8-5D65-484E-BECF-990A0465B5E6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D7428F86-AD2C-40C7-A7AD-096E657BF613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7428F86-AD2C-40C7-A7AD-096E657BF613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7428F86-AD2C-40C7-A7AD-096E657BF613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7428F86-AD2C-40C7-A7AD-096E657BF613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

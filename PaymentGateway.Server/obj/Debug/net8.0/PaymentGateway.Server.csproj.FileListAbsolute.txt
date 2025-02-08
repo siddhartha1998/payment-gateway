@@ -182,3 +182,7 @@ D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\runtimes\win\lib\n
 D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\FluentValidation.dll
+D:\Task\PaymentGateway\PaymentGateway.Server\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -1,9 +1,9 @@
 ﻿namespace PaymentGateway.Server.Domain.Enums
 {
-    public enum PaymentStatus
+    public enum TransactionStatus
     {
+        Pending = -1,
         Success = 0,
-        Pending = 1,
-        Failed = 2
+        Failed = 1
     }
 }

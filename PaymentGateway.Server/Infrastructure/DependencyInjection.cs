@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using PaymentGateway.Server.Application.Common.Interface;
 using PaymentGateway.Server.Infrastructure.Identity;
 using PaymentGateway.Server.Infrastructure.Persistence;
@@ -45,10 +46,10 @@ namespace PaymentGateway.Server.Infrastructure
                         {
                             ValidateIssuerSigningKey = true,
                             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Key"])),
-                            ValidateIssuer = true,
                             ValidIssuer = configuration["JwtSettings:Issuer"],
-                            ValidateAudience = true,
+                            ValidateIssuer = true,
                             ValidAudience = configuration["JwtSettings:Audience"],
+                            ValidateAudience = true,
                             ValidateLifetime = true,
                             ClockSkew = TimeSpan.Zero
                         };
@@ -58,8 +59,57 @@ namespace PaymentGateway.Server.Infrastructure
 
             services.AddTransient<IDateTime, DateTimeService>();
             services.AddTransient<IIdentityService, IdentityService>();
-
+            AddSwaggerConfiguration(services);
             return services;
+        }
+
+        public static void AddSwaggerConfiguration(this IServiceCollection services)
+        {
+            services.AddSwaggerGen(config =>
+            {
+                config.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "PaymentGatewayApis",
+                    Version = "v1",
+                    Description = "To test API from Swagger",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "API Support",
+                        Url = new Uri("https://www.api.com/support"),
+                        Email = "er.siddhartha1998@gmail.com"
+                    },
+                    TermsOfService = new Uri("https://www.api.com/termsandservices"),
+                });
+
+                config.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Description = "Enter the Bearer Authorization string as following: `Bearer Generated-JWT-Token`",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                config.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Scheme = "oauth2",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header,
+                        },
+                        new List<string>()
+                    }
+                });
+            });
+
+          //  services.AddSwaggerGenNewtonsoftSupport();
         }
     }
 }
