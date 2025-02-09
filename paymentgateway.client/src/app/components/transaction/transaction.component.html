@@ -38,10 +38,16 @@
         <div class="form-group">
           <label for="amount">Amount</label>
           <input type="number" id="amount" formControlName="Amount" placeholder="Enter amount" required min="0">
+          <div *ngIf="isSubmitted && f['Amount'].errors" class="error">
+            <div *ngIf="f['Amount'].errors['required']">Amount is required</div>
+          </div>
         </div>
         <div class="form-group">
           <label for="currency">Currency</label>
           <input type="text" id="currency" formControlName="Currency" placeholder="Enter currency" required>
+          <div *ngIf="isSubmitted && f['Currency'].errors" class="error">
+            <div *ngIf="f['Currency'].errors['required']">Currency is required</div>
+          </div>
         </div>
         <div class="form-group">
           <label for="paymentMethod">Payment Method</label>
@@ -55,23 +61,44 @@
         <div *ngIf="paymentMethod === paymentMethods.Card" class="form-group">
           <label for="cardNumber">Card Number</label>
           <input type="text" id="cardNumber" formControlName="CardNumber" placeholder="Enter card number" required>
+          <div *ngIf="isSubmitted && f['CardNumber'].errors" class="error">
+            <div *ngIf="f['CardNumber'].errors['required']">CardNumber is required</div>
+            <div *ngIf="f['CardNumber'].errors['minlength']">Minimum Card length should be 13</div>
+            <div *ngIf="f['CardNumber'].errors['maxlength']">Maximum card length should be 19</div>
+          </div>
         </div>
         <div *ngIf="paymentMethod === paymentMethods.Card" class="form-group">
           <label for="expiryDate">Expiry Date</label>
-          <input type="text" id="expiryDate" formControlName="ExpiryDate" placeholder="MM/YY" required>
+          <input type="text" id="expiryDate" formControlName="ExpiryDate" placeholder="MMYY" required>
+          <div *ngIf="isSubmitted && f['ExpiryDate'].errors" class="error">
+            <div *ngIf="f['ExpiryDate'].errors['required']">ExpiryDate is required</div>
+          </div>
         </div>
         <div *ngIf="paymentMethod === paymentMethods.Card" class="form-group">
           <label for="cvv">CVV</label>
-          <input type="number" id="cvv" formControlName="Cvv" placeholder="Enter CVV" required>
+          <input type="number" id="cvv" formControlName="Cvv" placeholder="Enter CVV" required min="0">
+          <div *ngIf="isSubmitted && f['Cvv'].errors" class="error">
+            <div *ngIf="f['Cvv'].errors['required']">Cvv is required</div>
+            <div *ngIf="f['Cvv'].errors['minlength']">Minimum CVV length should be 3</div>
+            <div *ngIf="f['Cvv'].errors['maxlength']">Maximum CVV length should be 4</div>
+          </div>
         </div>
         
         <div *ngIf="paymentMethod === paymentMethods.BankTransfer" class="form-group">
           <label for="accountNumber">Account Number</label>
           <input type="text" id="accountNumber" formControlName="AccountNumber" placeholder="Enter account number" required>
+          <div *ngIf="isSubmitted && f['AccountNumber'].errors" class="error">
+            <div *ngIf="f['AccountNumber'].errors['required']">AccountNumber is required</div>
+            <div *ngIf="f['AccountNumber'].errors['minlength']">Minimum AccountNumber length should be 10</div>
+            <div *ngIf="f['AccountNumber'].errors['maxlength']">Maximum AccountNumber length should be 18</div>
+          </div>
         </div>
         <div *ngIf="paymentMethod === paymentMethods.BankTransfer" class="form-group">
           <label for="bankName">Bank Name</label>
           <input type="text" id="bankName" formControlName="BankName" placeholder="Enter bank name" required>
+          <div *ngIf="isSubmitted && f['BankName'].errors" class="error">
+            <div *ngIf="f['BankName'].errors['required']">BankName is required</div>
+          </div>
         </div>
         
         <div class="button-group">

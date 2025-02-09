@@ -20,24 +20,24 @@ namespace PaymentGateway.Server.Api.Controllers
             _hmacService = hmacService;
         }
 
-        [HttpPost("/generate-hmac")]
-        public string GenerateHmac([FromBody] CreatePaymentCommand command)
-        {
-            string requestData = JsonConvert.SerializeObject(command);
-            string hmac = _hmacService.ComputeHmac(requestData);
-            return hmac;
-        }
+        //[HttpPost("/generate-hmac")]
+        //public string GenerateHmac([FromBody] CreatePaymentCommand command)
+        //{
+        //    string requestData = JsonConvert.SerializeObject(command);
+        //    string hmac = _hmacService.ComputeHmac(requestData);
+        //    return hmac;
+        //}
 
 
         [HttpPost("process")]
-        public async Task<ActionResult<Result>> paymentProcess([FromBody] CreatePaymentCommand createPayment, [FromHeader] string hmac)
+        public async Task<ActionResult<Result>> paymentProcess([FromBody] CreatePaymentCommand createPayment)
         {
-            string requestData = JsonConvert.SerializeObject(createPayment);
+            //string requestData = JsonConvert.SerializeObject(createPayment);
 
-            if (!_hmacService.VerifyHmac(requestData, hmac))
-            {
-                return Unauthorized(new { Message = "Invalid HMAC signature" });
-            }
+            //if (!_hmacService.VerifyHmac(requestData, hmac))
+            //{
+            //    return Unauthorized(new { Message = "Invalid HMAC signature" });
+            //}
 
             return await Mediator.Send(createPayment);
 

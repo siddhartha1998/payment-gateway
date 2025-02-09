@@ -16,15 +16,13 @@ namespace PaymentGateway.Server.Application.Payments.Commands
     {
         public int UserId { get; set; }
         public decimal Amount { get; set; }
-        public string Currency { get; set; } = string.Empty;
+        public string? Currency { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
-        //public string Email { get; set; } = string.Empty;
         public string? CardNumber { get; set; }
         public string ExpiryDate { get; set; } = string.Empty;
         public int Cvv { get; set; }
-        //public string? CardType { get; set; }
-        public string AccountNumber { get; set; } = string.Empty;
-        public string BankName { get; set; } = string.Empty;
+        public string? AccountNumber { get; set; }
+        public string? BankName { get; set; }
     }
 
     public class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand, Result>
