@@ -18,11 +18,11 @@ namespace PaymentGateway.Server.Application.Payments.Commands
         public decimal Amount { get; set; }
         public string Currency { get; set; } = string.Empty;
         public PaymentMethod PaymentMethod { get; set; }
-        public string Email { get; set; } = string.Empty;
+        //public string Email { get; set; } = string.Empty;
         public string? CardNumber { get; set; }
         public string ExpiryDate { get; set; } = string.Empty;
         public int Cvv { get; set; }
-        public string? CardType { get; set; }
+        //public string? CardType { get; set; }
         public string AccountNumber { get; set; } = string.Empty;
         public string BankName { get; set; } = string.Empty;
     }
@@ -49,7 +49,7 @@ namespace PaymentGateway.Server.Application.Payments.Commands
                 InvoiceNo = 8.RandomNumber(),
                 Amount = request.Amount,
                 CardNumber = request.CardNumber,
-                CardType = request.CardType,
+                CardType = "Visa",
                 Cvv = request.Cvv
             };
 

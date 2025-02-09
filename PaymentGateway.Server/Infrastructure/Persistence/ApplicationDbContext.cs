@@ -75,8 +75,7 @@ namespace PaymentGateway.Server.Infrastructure.Persistence
             builder.Entity<Transaction>(config =>
             {
                 config.Property(t => t.CardNumber)
-               .HasMaxLength(19)
-               .IsRequired();
+               .HasMaxLength(19);
 
                 config.Property(t => t.Amount)
                     .HasColumnType("decimal(12,4)")

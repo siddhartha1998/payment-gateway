@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <ul>
+      <li (click)="navigateToUserDetails()" [class.active]="isActive('user')">
+        <span class="icon">👤</span>
+        <span class="text">User</span>
+      </li>
+      <li (click)="navigateToTransactionDetails()" [class.active]="isActive('transaction')">
+        <span class="icon">💳</span>
+        <span class="text">Transaction</span>
+      </li>
+    </ul>
+    
+    <div class="sidebar-footer">
+      © {{ currentYear }} Siddhiganesh Joshi
+    </div>
+  </div>

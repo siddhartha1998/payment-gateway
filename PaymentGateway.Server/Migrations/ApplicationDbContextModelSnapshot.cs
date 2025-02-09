@@ -158,7 +158,6 @@ namespace PaymentGateway.Server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardNumber")
-                        .IsRequired()
                         .HasMaxLength(19)
                         .HasColumnType("nvarchar(19)");
 

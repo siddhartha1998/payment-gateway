@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="user-details-content">
+  <h2>User Details</h2>
+  <div class="user-info">
+    <div class="info-item">
+      <span class="label">Name:</span>
+      <span class="value">{{ user.fullname }}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Email:</span>
+      <a href="mailto:{{ user.email }}" class="value">{{ user.email }}</a>
+    </div>
+    <div class="info-item">
+      <span class="label">Username:</span>
+      <span class="value">{{ user.username }}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Phone Number:</span>
+      <a href="tel:{{ user.phoneNumber }}" class="value">{{ user.phoneNumber }}</a>
+    </div>
+    <div class="info-item">
+      <span class="label">Status:</span>
+      <span class="value status {{ user.isActive ? 'active' : 'inactive' }}">
+        {{ user.isActive ? 'Active' : 'Inactive' }}
+      </span>
+    </div>
+  </div>
+</div>

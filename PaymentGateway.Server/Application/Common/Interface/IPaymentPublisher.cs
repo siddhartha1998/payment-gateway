@@ -2,12 +2,7 @@
 using PaymentGateway.Server.Application.Payments.Commands;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using System.Collections.Concurrent;
-using System.Data.Common;
 using System.Text;
-using System.Text.Json;
-using System.Threading.Channels;
-using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace PaymentGateway.Server.Application.Common.Interface
 {
@@ -22,8 +17,6 @@ namespace PaymentGateway.Server.Application.Common.Interface
         private readonly ConnectionFactory _factory;
         private readonly IConnection _connection;
         private readonly IModel _channel;
-        private readonly string _requestQueueName;
-        private readonly string _responseQueueName;
         private readonly string _queueName = "paymentQueue";
 
         public PaymentPublisherService(IConfiguration configuration)
@@ -38,7 +31,6 @@ namespace PaymentGateway.Server.Application.Common.Interface
             };
             _connection = _factory.CreateConnection();
             _channel = _connection.CreateModel();
-            _requestQueueName = _configuration["RabbitMQ:RequestQueueName"];
             _channel.QueueDeclare(queue: _queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
         }
 

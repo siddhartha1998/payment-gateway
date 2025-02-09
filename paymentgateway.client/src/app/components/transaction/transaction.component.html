@@ -1,0 +1,164 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="transaction-container">
+  <h2>Transaction Details</h2>
+  <div class="button-container">
+    <button class="btn" (click)="openModal()">Add</button>
+  </div>
+  <table class="transaction-table">
+    <thead>
+      <tr>
+        <th>TransactionId</th>
+        <th>PayerName</th>
+        <th>Amount</th>
+        <th>TransactionDate</th>
+        <th>TransactionStatus</th>
+        <th>PaymentMethod</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.referenceNo }}</td>
+        <td>{{ transaction.payerName }}</td>
+        <td>{{ transaction.amount }}</td>
+        <td>{{ transaction.transactionDate }}</td>
+        <td>{{ transaction.paymentStatus }}</td>
+        <td>{{ transaction.paymentMethod }}</td>
+        <td><button class="btn view-btn" (click)="viewTransaction(transaction)">View</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <button class="close-btn" (click)="closeModal()">×</button>
+      <h2>Add Transaction</h2>
+      <form [formGroup]="transactionForm" (ngSubmit)="addTransaction()">
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" formControlName="Amount" placeholder="Enter amount" required min="0">
+        </div>
+        <div class="form-group">
+          <label for="currency">Currency</label>
+          <input type="text" id="currency" formControlName="Currency" placeholder="Enter currency" required>
+        </div>
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method</label>
+          <select id="paymentMethod" formControlName="PaymentMethod" required>
+            <option value="">Select Payment Method</option>
+            <option [value]="paymentMethods.BankTransfer">Bank Transfer</option>
+            <option [value]="paymentMethods.Card">Card</option>
+          </select>
+        </div>
+        
+        <div *ngIf="paymentMethod === paymentMethods.Card" class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" formControlName="CardNumber" placeholder="Enter card number" required>
+        </div>
+        <div *ngIf="paymentMethod === paymentMethods.Card" class="form-group">
+          <label for="expiryDate">Expiry Date</label>
+          <input type="text" id="expiryDate" formControlName="ExpiryDate" placeholder="MM/YY" required>
+        </div>
+        <div *ngIf="paymentMethod === paymentMethods.Card" class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="number" id="cvv" formControlName="Cvv" placeholder="Enter CVV" required>
+        </div>
+        
+        <div *ngIf="paymentMethod === paymentMethods.BankTransfer" class="form-group">
+          <label for="accountNumber">Account Number</label>
+          <input type="text" id="accountNumber" formControlName="AccountNumber" placeholder="Enter account number" required>
+        </div>
+        <div *ngIf="paymentMethod === paymentMethods.BankTransfer" class="form-group">
+          <label for="bankName">Bank Name</label>
+          <input type="text" id="bankName" formControlName="BankName" placeholder="Enter bank name" required>
+        </div>
+        
+        <div class="button-group">
+          <button type="submit" class="btn primary">Add Transaction</button>
+          <button type="button" class="btn cancel" (click)="closeModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+ <!-- View Transaction Modal -->
+<div class="modal" *ngIf="viewTransactionDetails">
+    <div class="modal-content">
+      <button class="close-btn" (click)="closeViewModal()">×</button>
+      <h2>Transaction Details</h2>
+      
+      <div class="transaction-details">
+        <div class="detail-section">
+          <h3>Transaction Info</h3>
+          <div class="detail-item">
+            <span class="label">Transaction ID:</span>
+            <span class="value">{{ selectedTransaction.referenceNo }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Date:</span>
+            <span class="value">{{ selectedTransaction.transactionDate | date: 'short' }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Status:</span>
+            <span class="value status {{ selectedTransaction.paymentStatus.toLowerCase() }}">
+              {{ selectedTransaction.paymentStatus }}
+            </span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Amount:</span>
+            <span class="value">{{ selectedTransaction.amount | currency }}</span>
+          </div>
+        </div>
+        
+        <div class="detail-section">
+          <h3>Payer Information</h3>
+          <div class="detail-item">
+            <span class="label">Name:</span>
+            <span class="value">{{ selectedTransaction.payerName }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Email:</span>
+            <span class="value">{{ selectedTransaction.email }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Phone:</span>
+            <span class="value">{{ selectedTransaction.phoneNumber }}</span>
+          </div>
+        </div>
+        
+        <div class="detail-section">
+          <h3>Payment Information</h3>
+          <div class="detail-item">
+            <span class="label">Payment Method:</span>
+            <span class="value">{{ selectedTransaction.paymentMethod }}</span>
+          </div>
+          <div *ngIf="selectedTransaction.paymentMethod === 'Card'" class="detail-item">
+            <span class="label">Card Number:</span>
+            <span class="value">{{ selectedTransaction.cardNumber }}</span>
+          </div>
+          <div *ngIf="selectedTransaction.paymentMethod === 'Card'" class="detail-item">
+            <span class="label">Expiry Date:</span>
+            <span class="value">{{ selectedTransaction.expiryDate }}</span>
+          </div>
+          <div *ngIf="selectedTransaction.paymentMethod === 'Card'" class="detail-item">
+            <span class="label">CVV:</span>
+            <span class="value">{{ selectedTransaction.cvv }}</span>
+          </div>
+          <div *ngIf="selectedTransaction.paymentMethod === 'BankTransfer'" class="detail-item">
+            <span class="label">Account Number:</span>
+            <span class="value">{{ selectedTransaction.accountNumber }}</span>
+          </div>
+          <div *ngIf="selectedTransaction.paymentMethod === 'BankTransfer'" class="detail-item">
+            <span class="label">Bank Name:</span>
+            <span class="value">{{ selectedTransaction.bankName }}</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="button-group">
+        <button class="btn cancel" (click)="closeViewModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

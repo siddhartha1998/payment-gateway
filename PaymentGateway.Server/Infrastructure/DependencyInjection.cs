@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PaymentGateway.Server.Api.Services;
 using PaymentGateway.Server.Application.Common.Interface;
 using PaymentGateway.Server.Infrastructure.Identity;
 using PaymentGateway.Server.Infrastructure.Persistence;
 using PaymentGateway.Server.Infrastructure.Services;
+using System.Reflection;
 using System.Text;
 
 namespace PaymentGateway.Server.Infrastructure
@@ -60,6 +63,9 @@ namespace PaymentGateway.Server.Infrastructure
             services.AddTransient<IDateTime, DateTimeService>();
             services.AddTransient<IIdentityService, IdentityService>();
             AddSwaggerConfiguration(services);
+            var secretKey = configuration["HmacSettings:SecretKey"];
+            services.AddSingleton(new HmacService(secretKey));
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             return services;
         }
 

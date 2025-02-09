@@ -1,0 +1,55 @@
+{
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.Console",
+      "Serilog.Sinks.File",
+      "Serilog.Sinks.Seq"
+    ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": { 
+        "Microsoft": "Error"
+      },
+      "System": "Warning"
+    },
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": {
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {SourceContext} [{Level}] {Message}{NewLine}{Exception}"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Logs/payment-gateway-.log",
+          "rollingInterval": "Day",
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {SourceContext} [{Level}] {Message}{NewLine}{Exception}",
+          "formatter": {
+            "type": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
+          }
+        }
+      },
+      {
+        "Name": "Seq",
+        "Args": {
+          "serverUrl": "http://localhost:5341/", 
+          "apiKey": "",
+          "rollingInterval": "Day",
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {SourceContext} [{Level}] {Message}{NewLine}{Exception}",
+          "formatter": {
+            "type": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
+          }
+        }
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithThreadId"
+    ],
+    "Properties": {
+      "Application": "Payment-Gaeway"
+    }
+  }
+}

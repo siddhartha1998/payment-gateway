@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Welcome Back</h2>
+    <p>Login to your account</p>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="userName">UserName</label>
+        <input type="text" id="userName" formControlName="UserName" required>
+        <div *ngIf="siginInsubmitted && f['UserName'].errors" class="error">
+          <div *ngIf="f['UserName'].errors['required']">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="Password" required>
+        <div *ngIf="siginInsubmitted && f['Password'].errors" class="error">
+          <div *ngIf="f['Password'].errors['required']">Password is required</div>
+        </div>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.dashboard-content {
+    margin-left: 250px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .statistics {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .statistic {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .statistic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .statistic-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .statistic-value {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+  }

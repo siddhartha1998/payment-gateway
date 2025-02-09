@@ -3,7 +3,6 @@ using PaymentGateway.Server.Application.Payments.Commands;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PaymentGateway.Server.Application.Common.Services
 {
@@ -13,7 +12,6 @@ namespace PaymentGateway.Server.Application.Common.Services
         private readonly IConfiguration _configuration;
         private readonly HttpClient _httpClient;
         private readonly ConnectionFactory _factory;
-        private readonly string _responseQueueName;
         private readonly string _queueName = "paymentQueue";
         public PaymentConsumerService(IConfiguration configuration, HttpClient httpClient)
         {
@@ -29,44 +27,6 @@ namespace PaymentGateway.Server.Application.Common.Services
                 NetworkRecoveryInterval = TimeSpan.FromSeconds(10)
             };
             _factory.AutomaticRecoveryEnabled = true;
-            _responseQueueName = _configuration["RabbitMQ:ResponseQueueName"];
-        }
-        public void ConsumePaymentResponseAsync()
-        {
-
-
-            //var tcs = new TaskCompletionSource<PaymentResponse>();
-
-            //lock (_pendingResponses)
-            //{
-            //    _pendingResponses[correlationId] = tcs;
-            //}
-
-            //using var connection = _factory.CreateConnection();
-            //using var channel = connection.CreateModel();
-
-            //channel.QueueDeclare(queue: _responseQueueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
-
-            //var consumer = new EventingBasicConsumer(channel);
-            //consumer.Received += (model, ea) =>
-            //{
-            //    var body = ea.Body.ToArray();
-            //    var message = Encoding.UTF8.GetString(body);
-            //    var response = JsonConvert.DeserializeObject<PaymentResponse>(message);
-
-            //    if (response != null && _pendingResponses.TryGetValue(correlationId, out var responseTcs))
-            //    {
-            //        responseTcs.SetResult(response);
-            //        lock (_pendingResponses)
-            //        {
-            //            _pendingResponses.Remove(correlationId);
-            //        }
-            //    }
-            //};
-
-            //channel.BasicConsume(queue: _responseQueueName, autoAck: true, consumer: consumer);
-
-            //return await tcs.Task.WaitAsync(TimeSpan.FromSeconds(15));
         }
 
         protected async override Task ExecuteAsync(CancellationToken stoppingToken)
@@ -161,7 +121,6 @@ namespace PaymentGateway.Server.Application.Common.Services
                     TransactionDateTime = DateTime.UtcNow,
                 };
             }
-
         }
 
     }

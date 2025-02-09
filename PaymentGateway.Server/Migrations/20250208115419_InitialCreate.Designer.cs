@@ -12,8 +12,8 @@ using PaymentGateway.Server.Infrastructure.Persistence;
 namespace PaymentGateway.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250208083909_add-columns")]
-    partial class addcolumns
+    [Migration("20250208115419_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -161,7 +161,6 @@ namespace PaymentGateway.Server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardNumber")
-                        .IsRequired()
                         .HasMaxLength(19)
                         .HasColumnType("nvarchar(19)");
 

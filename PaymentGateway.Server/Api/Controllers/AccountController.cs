@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using PaymentGateway.Server.Application.Common.Interface;
+using PaymentGateway.Server.Application.Users.Queries;
 using PaymentGateway.Server.Infrastructure.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
@@ -31,7 +32,7 @@ namespace PaymentGateway.Server.Api.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("/api/login")]
+        [HttpPost("/login")]
         public async Task<ActionResult<string>> Authenticate([FromBody] AuthenticationRequest authenticationRequest)
         {
             if (!ModelState.IsValid)
@@ -40,7 +41,7 @@ namespace PaymentGateway.Server.Api.Controllers
             }
             var identityUser = await _userManager.FindByEmailAsync(authenticationRequest.UserName);
             identityUser ??= await _userManager.FindByNameAsync(authenticationRequest.UserName);
-          
+
             if (identityUser == null || identityUser.IsActive == false)
             {
                 return Unauthorized();
@@ -50,14 +51,12 @@ namespace PaymentGateway.Server.Api.Controllers
 
             var tokenResult = new
             {
-                User = new UserResponse
-                {
-                    UserName = identityUser.UserName,
-                    Email = identityUser.Email,
-                    PhoneNo = identityUser.PhoneNumber,
-                    IsActive = identityUser.IsActive,
-                    Roles = (await _userManager.GetRolesAsync(identityUser)).ToList(),
-                },
+                UserId = identityUser.Id,
+                UserName = identityUser.UserName,
+                Email = identityUser.Email,
+                PhoneNo = identityUser.PhoneNumber,
+                IsActive = identityUser.IsActive,
+                Roles = (await _userManager.GetRolesAsync(identityUser)).ToList(),
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
                 Expiration = token.ValidTo
             };
@@ -66,10 +65,17 @@ namespace PaymentGateway.Server.Api.Controllers
 
         }
 
+        [HttpGet]
+        public async Task<ActionResult<CurrentUserDetail>> GetCurrentUserDetail()
+        {
+            var query = new GetCurrentUserQuery();
+            return await Mediator.Send(query);
+        }
+
         private async Task<List<Claim>> GetClaimsAsync(ApplicationUser user)
         {
             var roles = await _userManager.GetRolesAsync(user);
-            List<Claim> roleClaims = roles.Select(role => new Claim("roles",role)).ToList();
+            List<Claim> roleClaims = roles.Select(role => new Claim("roles", role)).ToList();
             List<Claim> userClaims = (await _userManager.GetClaimsAsync(user)).ToList();
             userClaims = userClaims.Union(roleClaims).ToList();
             userClaims = new List<Claim>(userClaims)
@@ -107,6 +113,7 @@ namespace PaymentGateway.Server.Api.Controllers
 
     public class UserResponse
     {
+        public int UserId { get; set; }
         public string? UserName { get; set; }
         public string? Email { get; set; }
         public string? PhoneNo { get; set; }

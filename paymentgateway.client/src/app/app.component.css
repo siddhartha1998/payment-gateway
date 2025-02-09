@@ -1,14 +1,118 @@
 ﻿:host {
-    max-width: 1280px;
-    padding: 2rem;
-    text-align: center;
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 th, td {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
 table {
-    margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  flex: 1;
+}
+
+nav ul li.nav-item {
+  flex: none;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+nav ul li a i {
+  margin-right: 8px;
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+}
+
+aside {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+aside ul li a:hover {
+  color: #007BFF;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
