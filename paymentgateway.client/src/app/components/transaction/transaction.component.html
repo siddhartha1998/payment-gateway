@@ -3,7 +3,15 @@
 <div class="transaction-container">
   <h2>Transaction Details</h2>
   <div class="button-container">
-    <button class="btn" (click)="openModal()">Add</button>
+    <button class="btn" (click)="openModal()">Add Transaction</button>
+  </div><div class="filter-container">
+    <label for="statusFilter">Filter by Status:</label>
+    <select id="statusFilter" [(ngModel)]="selectedStatus" (change)="showfilteredTransactions()">
+      <option value="">All</option>
+      <option value="Success">Success</option>
+      <option value="Failed">Failed</option>
+      <option value="Pending">Pending</option>
+    </select>
   </div>
   <table class="transaction-table">
     <thead>
@@ -18,7 +26,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let transaction of transactions">
+      <tr *ngFor="let transaction of filteredTransactions">
         <td>{{ transaction.referenceNo }}</td>
         <td>{{ transaction.payerName }}</td>
         <td>{{ transaction.amount }}</td>

@@ -4,8 +4,16 @@
 }
 
 .button-container {
-  text-align: left;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .transaction-table {

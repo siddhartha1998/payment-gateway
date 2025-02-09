@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\Task\\PaymentGateway\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\application\\payments\\commands\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|solutionrelative:paymentgateway.server\\application\\payments\\commands\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|d:\\task\\paymentgateway\\demopaymentserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|solutionrelative:demopaymentserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|d:\\task\\paymentgateway\\demopaymentserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|solutionrelative:demopaymentserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|d:\\task\\paymentgateway\\demopaymentserver\\controllers\\processpaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|solutionrelative:demopaymentserver\\controllers\\processpaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|solutionrelative:paymentgateway.server\\api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\application\\common\\services\\paymentconsumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|solutionrelative:paymentgateway.server\\application\\common\\services\\paymentconsumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|solutionrelative:paymentgateway.server\\api\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\application\\payments\\commands\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|solutionrelative:paymentgateway.server\\application\\payments\\commands\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\application\\payments\\commands\\createpaymentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,16 +99,8 @@
       "RelativeMoniker": "D:0:0:{137B09F8-5D65-484E-BECF-990A0465B5E6}|paymentgateway.client\\paymentgateway.client.esproj|solutionrelative:paymentgateway.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|d:\\task\\paymentgateway\\demopaymentserver\\controllers\\processpaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|solutionrelative:demopaymentserver\\controllers\\processpaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|solutionrelative:paymentgateway.server\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|d:\\task\\paymentgateway\\demopaymentserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|solutionrelative:demopaymentserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\infrastructure\\persistence\\applicationdbcontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|d:\\task\\paymentgateway\\paymentgateway.server\\infrastructure\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{126D4983-ACFD-4191-9ADC-3B0425F90567}|PaymentGateway.Server\\PaymentGateway.Server.csproj|solutionrelative:paymentgateway.server\\infrastructure\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|d:\\task\\paymentgateway\\demopaymentserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|solutionrelative:demopaymentserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7428F86-AD2C-40C7-A7AD-096E657BF613}|DemoPaymentServer\\DemoPaymentServer.csproj|d:\\task\\paymentgateway\\demopaymentserver\\services\\paymentprocessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -194,7 +194,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -202,59 +202,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreatePaymentCommand.cs",
-              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
-              "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
-              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
-              "RelativeToolTip": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T19:24:06.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeToolTip": "PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T17:42:03.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApiControllerBase.cs",
-              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
-              "RelativeDocumentMoniker": "PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
-              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
-              "RelativeToolTip": "PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T17:15:28.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Controllers\\PaymentController.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Api\\Controllers\\PaymentController.cs",
               "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Controllers\\PaymentController.cs",
               "RelativeToolTip": "PaymentGateway.Server\\Api\\Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T18:12:30.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "TransactionDetail.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Queries\\TransactionDetail.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Payments\\Queries\\TransactionDetail.cs",
@@ -267,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Transaction.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Domain\\Entities\\Transaction.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Domain\\Entities\\Transaction.cs",
@@ -280,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "GetAllTransactionDetailsQuery.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Queries\\GetAllTransactionDetailsQuery.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Payments\\Queries\\GetAllTransactionDetailsQuery.cs",
@@ -293,20 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreatePaymentCommandValidator.cs",
-              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
-              "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
-              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
-              "RelativeToolTip": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T07:08:27.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "PaymentConsumerService.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Common\\Services\\PaymentConsumerService.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Common\\Services\\PaymentConsumerService.cs",
@@ -319,7 +267,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
+              "Title": "CreatePaymentCommandValidator.cs",
+              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
+              "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
+              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
+              "RelativeToolTip": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T07:08:27.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Program.cs",
+              "RelativeDocumentMoniker": "DemoPaymentServer\\Program.cs",
+              "ToolTip": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Program.cs",
+              "RelativeToolTip": "DemoPaymentServer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T17:12:43.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "DemoPaymentServer\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DemoPaymentServer\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-08T08:03:42.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProcessPaymentController.cs",
+              "DocumentMoniker": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
+              "RelativeDocumentMoniker": "DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
+              "ToolTip": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
+              "RelativeToolTip": "DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T06:12:57.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApiControllerBase.cs",
+              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
+              "RelativeDocumentMoniker": "PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
+              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
+              "RelativeToolTip": "PaymentGateway.Server\\Api\\Controllers\\ApiControllerBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T17:15:28.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T17:42:03.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreatePaymentCommand.cs",
+              "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
+              "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
+              "ToolTip": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
+              "RelativeToolTip": "PaymentGateway.Server\\Application\\Payments\\Commands\\CreatePaymentCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T19:24:06.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CurrentUserDetail.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Users\\Queries\\CurrentUserDetail.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Users\\Queries\\CurrentUserDetail.cs",
@@ -332,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Api\\Controllers\\AccountController.cs",
@@ -345,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "HmacService.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Services\\HmacService.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Api\\Services\\HmacService.cs",
@@ -358,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\appsettings.json",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\appsettings.json",
@@ -371,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "PaymentGateway.Server.csproj",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\PaymentGateway.Server.csproj",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\PaymentGateway.Server.csproj",
@@ -384,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Program.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Program.cs",
@@ -397,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "GetCurrentUserQuery.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Users\\Queries\\GetCurrentUserQuery.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Users\\Queries\\GetCurrentUserQuery.cs",
@@ -410,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ICurrentUserService.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Common\\Interface\\ICurrentUserService.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Common\\Interface\\ICurrentUserService.cs",
@@ -423,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CurrentUserService.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Api\\Services\\CurrentUserService.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Api\\Services\\CurrentUserService.cs",
@@ -436,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "IPaymentPublisher.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Application\\Common\\Interface\\IPaymentPublisher.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Application\\Common\\Interface\\IPaymentPublisher.cs",
@@ -449,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "logging.config.json",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\logging.config.json",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\logging.config.json",
@@ -462,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Infrastructure\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Infrastructure\\DependencyInjection.cs",
@@ -475,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "app.component.html",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\paymentgateway.client\\src\\app\\app.component.html",
               "RelativeDocumentMoniker": "paymentgateway.client\\src\\app\\app.component.html",
@@ -488,20 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ProcessPaymentController.cs",
-              "DocumentMoniker": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
-              "RelativeDocumentMoniker": "DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
-              "ToolTip": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
-              "RelativeToolTip": "DemoPaymentServer\\Controllers\\ProcessPaymentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T06:12:57.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Infrastructure\\Identity\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Infrastructure\\Identity\\ApplicationUser.cs",
@@ -514,20 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Program.cs",
-              "RelativeDocumentMoniker": "DemoPaymentServer\\Program.cs",
-              "ToolTip": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Program.cs",
-              "RelativeToolTip": "DemoPaymentServer\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T17:12:43.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ApplicationDbContextSeed.cs",
               "DocumentMoniker": "D:\\Task\\PaymentGateway\\PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContextSeed.cs",
               "RelativeDocumentMoniker": "PaymentGateway.Server\\Infrastructure\\Persistence\\ApplicationDbContextSeed.cs",
@@ -549,19 +562,6 @@
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwCQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T19:00:46.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "DemoPaymentServer\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Task\\PaymentGateway\\DemoPaymentServer\\Properties\\launchSettings.json",
-              "RelativeToolTip": "DemoPaymentServer\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-08T08:03:42.146Z",
               "EditorCaption": ""
             },
             {

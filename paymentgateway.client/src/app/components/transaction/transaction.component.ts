@@ -12,6 +12,8 @@ import { PaymentMethod } from '../../shared/enums/payment-method.enum';
 })
 export class TransactionComponent implements OnInit {
   transactions: any[] = [];
+  filteredTransactions: any[] = [];
+  selectedStatus: string = '';
   showModal: boolean = false;
   transactionForm: FormGroup;
   paymentMethods = PaymentMethod;
@@ -55,6 +57,7 @@ export class TransactionComponent implements OnInit {
     .subscribe({
       next: (res: any) =>{
         this.transactions = res;
+        this.filteredTransactions = res;
       },
       error: err =>{
         console.error('Error fetching transactions', err);
@@ -112,6 +115,16 @@ export class TransactionComponent implements OnInit {
   closeViewModal(): void {
     this.viewTransactionDetails = false;
     this.selectedTransaction = null;
+  }
+
+  showfilteredTransactions(): void {
+    if (this.selectedStatus) {
+      this.filteredTransactions = this.transactions.filter(transaction =>
+        transaction.paymentStatus === this.selectedStatus
+      );
+    } else {
+      this.filteredTransactions = [...this.transactions]; // Show all if no filter
+    }
   }
 
   updateFormAndValidator(value:number){
