@@ -75,7 +75,7 @@ namespace PaymentGateway.Server.Infrastructure
             {
                 config.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "PaymentGatewayApis",
+                    Title = "PaymentGatewayAPI",
                     Version = "v1",
                     Description = "To test API from Swagger",
                     Contact = new OpenApiContact
