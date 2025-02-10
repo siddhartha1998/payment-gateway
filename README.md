@@ -105,6 +105,6 @@ Removing /swagger/index.html from the URL will automatically redirect to the cli
 https://localhost:40075/login
 
 
-### Step 9: Redirecting to Client Application
+### Step 9: Login Credentials
 
 Check the default credentials in the seeding data for logged in into the application.
